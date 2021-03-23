@@ -8,7 +8,7 @@
 #calculator{
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 37vh;
     width: 80vw;
     margin-top: 10px;
     margin-left: auto;
@@ -26,6 +26,16 @@
     background-color: #293241;
     border-radius: 5px;
 }
+
+button{
+    margin: auto;
+    height: 8vw;
+    width: 15vw;
+    color: #f4fdff;
+    border-radius: 5px;
+    font-size: calc(8vw + .05vh);
+}
+
 #operations-bar{
     display: flex;
     width:70vw;
@@ -33,31 +43,45 @@
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #e0fbfc;
+    
+}
+#operations-bar > button {
     background-color: #3d5a80;
+}
+#number-pad > button {
+    background-color: #97c1d9;
+}
+
+#equals-button {
+    background-color: #ee6c4d;
+    height: 20vh;
 }
 
 #main-pad{
     display: flex;
     width:70vw;
-    height: 65vh;
+    height: 25vh;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: cyan;
+    background-color: #e0fbfc;
 }
 
 #number-pad{
     display: flex;
+    flex-wrap: wrap;
+    height: 100%;
     width: 50vw;
     margin-left: auto;
     margin-right: auto;
-    background-color: #97c1d9;
+    background-color: #e0fbfc;
 }
 
 #equals{
     display: flex;
-    width: 25vw;
+    width: 15vw;
     margin-left: auto;
     margin-right: auto;
-    background-color: #ee6c4d;
+    background-color: #e0fbfc;
 }
