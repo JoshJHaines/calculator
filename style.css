@@ -24,6 +24,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: #293241;
+    border-radius: 5px;
 }
 #operations-bar{
     display: flex;
