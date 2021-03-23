@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     border: 0;
-    background-color: black;
+    background-color: #293241;
 }
 
 #calculator{
@@ -13,7 +13,7 @@
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: lightblue;
+    background-color: #e0fbfc;
     border-radius: 30px;
 }
 
@@ -23,7 +23,7 @@
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: lightcoral;
+    background-color: #293241;
 }
 #operations-bar{
     display: flex;
@@ -32,7 +32,7 @@
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: darkcyan;
+    background-color: #3d5a80;
 }
 
 #main-pad{
@@ -48,17 +48,15 @@
 #number-pad{
     display: flex;
     width: 50vw;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: green;
+    background-color: #97c1d9;
 }
 
 #equals{
     display: flex;
     width: 25vw;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: orangered;
+    background-color: #ee6c4d;
 }
