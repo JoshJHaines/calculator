@@ -62,11 +62,13 @@ function updateScreen() {
 }
 //operator buttons
 function operatorClick(event) {
-	console.log(event);
+	//checks to see if operator select is filled
 	if (operatorSelect.length !== 0) {
+		//if so, solves the current equation
 		buttonEqualsClick();
 		operatorSelect[0] = event.target.innerText;
 	} else {
+		//if not, adds to operatorSelect
 		for (const operator of operators) {
 			operatorSelect[0] = event.target.innerText;
 		}
@@ -97,6 +99,7 @@ function buttonDecimalClick() {
 }
 
 function buttonEqualsClick() {
+	//if operatorSelector is empty, only firstNum is there and cannot calculate
 	if (operatorSelect.length !== 0) {
 		if (operatorSelect[0] === "+") {
 			solution = firstNum.join("") * 1 + secondNum.join("") * 1;
@@ -110,15 +113,18 @@ function buttonEqualsClick() {
 		if (operatorSelect[0] === "÷") {
 			solution = ((firstNum.join("") * 1) / secondNum.join("")) * 1;
 		}
+		//else if operatorSelector is filled, can calculate. Even empty secondNum will be 0 to fill in equation
 	} else {
 		solution = firstNum.join("") * 1;
 	}
-
+	//once solution defined, parseFloat rounds the number toFixed 4th decimal
 	screen.innerText = parseFloat(solution.toFixed(4));
+	//resets firstNum, operatorSelect, secondNum
 	resetData();
+	//refills firstNum with the rounded/parsed solution
 	firstNum[0] = parseFloat(solution.toFixed(4));
-	console.log(solution);
 }
+
 function buttonClearClick() {
 	resetData();
 	screen.innerText = 0;
@@ -126,6 +132,7 @@ function buttonClearClick() {
 
 //number buttons
 function numClick(event) {
+	//if statement decides if we are updating firstNum or secondNum
 	if (operatorSelect.length === 0) {
 		firstNum.push(event.target.innerText);
 	} else {
@@ -136,10 +143,8 @@ function numClick(event) {
 
 //night mode  stretch goal
 function toggleNightMode() {
-	console.log("NIGHT MODE CLICKED");
 	if (nightModeSet === false) {
 		nightModeSet = true;
-
 		document.getElementById("container").style.backgroundColor = "purple";
 	} else {
 		nightModeSet = false;
