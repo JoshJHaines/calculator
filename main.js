@@ -64,6 +64,11 @@ buttonClear.addEventListener("click", buttonClearClick);
 function testClick() {
 	console.log("Did this work?");
 }
+function resetData(){
+    firstNum.splice(0);
+	secondNum.splice(0);
+	operatorSelect.splice(0);
+}
 
 //number buttons
 function button1Click() {
@@ -214,13 +219,14 @@ function buttonEqualsClick() {
         solution = console.log(firstNum.join("") * 1);;
     }
 
-    screen.innerText = solution
+    screen.innerText = solution;
+    resetData()
+    firstNum[0] = solution 
 	console.log(solution);
 }
 function buttonClearClick() {
-	firstNum.splice(0);
-	secondNum.splice(0);
-	operatorSelect.splice(0);
+	resetData()
+    screen.innerText = 0
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("Operator:", operatorSelect.join(""));
 	console.log("SecondNum:", secondNum.join("") * 1);
