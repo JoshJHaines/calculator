@@ -60,16 +60,7 @@ function updateScreen() {
 			firstNum.join("") + operatorSelect + secondNum.join("");
 	}
 }
-
-function numClick(event) {
-	if (operatorSelect.length === 0) {
-		firstNum.push(event.target.innerText);
-	} else {
-		secondNum.push(event.target.innerText);
-	}
-	updateScreen();
-}
-
+//operator buttons
 function operatorClick(event) {
 	console.log(event);
 	if (operatorSelect.length !== 0) {
@@ -83,6 +74,14 @@ function operatorClick(event) {
 	updateScreen();
 }
 //number buttons
+function numClick(event) {
+	if (operatorSelect.length === 0) {
+		firstNum.push(event.target.innerText);
+	} else {
+		secondNum.push(event.target.innerText);
+	}
+	updateScreen();
+}
 
 function buttonDecimalClick() {
 	const num1decimalCheck = firstNum.includes(".");
@@ -105,37 +104,7 @@ function buttonDecimalClick() {
 		updateScreen();
 	}
 }
-//operator buttons
-function buttonPlusClick() {
-	if (operatorSelect.length !== 0) {
-		buttonEqualsClick();
-	}
-	operatorSelect[0] = `+`;
-	screen.innerText = firstNum.join("") * 1 + "+";
-	console.log(operatorSelect);
-}
-function buttonMinusClick() {
-	if (operatorSelect.length !== 0) {
-		buttonEqualsClick();
-	}
-	operatorSelect[0] = `-`;
-	screen.innerText = firstNum.join("") * 1 + "-";
-	console.log(operatorSelect);
-}
-function buttonMultiplyClick() {
-	if (operatorSelect.length !== 0) {
-		buttonEqualsClick();
-	}
-	operatorSelect[0] = `x`;
-	screen.innerText = firstNum.join("") * 1 + "x";
-}
-function buttonDivideClick() {
-	if (operatorSelect.length !== 0) {
-		buttonEqualsClick();
-	}
-	operatorSelect[0] = `÷`;
-	screen.innerText = firstNum.join("") * 1 + "÷";
-}
+
 function buttonEqualsClick() {
 	if (operatorSelect.length !== 0) {
 		if (operatorSelect[0] === "+") {
