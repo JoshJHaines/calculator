@@ -41,7 +41,7 @@ button {
 	width: 15vw;
 	color: #f4fdff;
 	border-radius: 5px;
-	/* font-size: calc(8vw + .05vh); */
+	font-size: 4vh;
 }
 
 #operations-bar {
@@ -108,4 +108,5 @@ button {
 #nightMode{
     background-color: red;
 	color: black;
+	font-size: 2vh;
 }
