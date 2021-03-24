@@ -18,13 +18,19 @@
 }
 
 #screen {
-	width: 70vw;
+	float: right;
+    text-align: right;
+    font-size: 4vh;
+    font-family: orbitron;
+    width: 70vw;
 	height: 5vh;
 	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #293241;
 	border-radius: 5px;
+    color: white;
+    ;
 }
 
 button {
