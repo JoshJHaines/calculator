@@ -248,9 +248,9 @@ function buttonEqualsClick() {
         solution = firstNum.join("") * 1;
     }
 
-    screen.innerText = solution;
+    screen.innerText = solution.toFixed(4);
     resetData()
-    firstNum[0] = solution 
+    firstNum[0] = solution.toFixed(4)
 	console.log(solution);
 }
 function buttonClearClick() {
