@@ -30,6 +30,8 @@ const buttonMultiply = document.getElementById("multiply");
 const buttonDivide = document.getElementById("divide");
 const buttonEquals = document.getElementById("equals-button");
 const buttonClear = document.getElementById("clear");
+//screen
+const screen = document.getElementById("screen");
 
 /****************************
  * CLICK HANDLING FUNCTION  *
@@ -67,8 +69,10 @@ function testClick() {
 function button1Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(1);
+        screen.innerText = firstNum.join("") * 1
 	} else {
 		secondNum.push(1);
+        screen.innerText = secondNum.join("") * 1
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -76,8 +80,10 @@ function button1Click() {
 function button2Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(2);
+        screen.innerText = firstNum.join("") * 1
 	} else {
 		secondNum.push(2);
+        screen.innerText = secondNum.join("") * 1
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -85,8 +91,10 @@ function button2Click() {
 function button3Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(3);
+        screen.innerText = firstNum.join("") * 1
 	} else {
 		secondNum.push(3);
+        screen.innerText = secondNum.join("") * 1
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -94,8 +102,10 @@ function button3Click() {
 function button4Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(4);
+        screen.innerText = firstNum.join("") * 1
 	} else {
 		secondNum.push(4);
+        screen.innerText = secondNum.join("") * 1
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -103,8 +113,10 @@ function button4Click() {
 function button5Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(5);
+        screen.innerText = firstNum.join("") * 1
 	} else {
 		secondNum.push(5);
+        screen.innerText = secondNum.join("") * 1
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -112,8 +124,10 @@ function button5Click() {
 function button6Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(6);
+        screen.innerText = firstNum.join("") * 1
 	} else {
 		secondNum.push(6);
+        screen.innerText = secondNum.join("") * 1
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -121,8 +135,10 @@ function button6Click() {
 function button7Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(7);
+        screen.innerText = firstNum.join("") * 1
 	} else {
 		secondNum.push(7);
+        screen.innerText = secondNum.join("") * 1
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -130,8 +146,10 @@ function button7Click() {
 function button8Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(8);
+        screen.innerText = firstNum.join("") * 1
 	} else {
 		secondNum.push(8);
+        screen.innerText = secondNum.join("") * 1
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -139,8 +157,10 @@ function button8Click() {
 function button9Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(9);
+        screen.innerText = firstNum.join("") * 1
 	} else {
 		secondNum.push(9);
+        screen.innerText = secondNum.join("") * 1
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -148,8 +168,10 @@ function button9Click() {
 function button0Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(0);
+        screen.innerText = firstNum.join("") * 1
 	} else {
 		secondNum.push(0);
+        screen.innerText = secondNum.join("") * 1
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -191,6 +213,8 @@ function buttonEqualsClick() {
 	} else {
         solution = console.log(firstNum.join("") * 1);;
     }
+
+    screen.innerText = solution
 	console.log(solution);
 }
 function buttonClearClick() {
