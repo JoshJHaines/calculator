@@ -241,7 +241,7 @@ function buttonEqualsClick() {
             solution = ((firstNum.join("") * 1) / secondNum.join("")) * 1;
         } 
 	} else {
-        solution = console.log(firstNum.join("") * 1);
+        solution = firstNum.join("") * 1;
     }
 
     screen.innerText = solution;
