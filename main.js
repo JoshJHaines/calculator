@@ -25,13 +25,15 @@ const button0 = document.getElementById("zero");
 const buttonDecimal = document.getElementById("decimal");
 
 //operators
-const buttonPlus = document.getElementById("plus");
-const buttonMinus = document.getElementById("minus");
-const buttonMultiply = document.getElementById("multiply");
-const buttonDivide = document.getElementById("divide");
-const buttonEquals = document.getElementById("equals-button");
-const buttonClear = document.getElementById("clear");
-//screen
+// const buttonPlus = document.getElementById("plus");
+// const buttonMinus = document.getElementById("minus");
+// const buttonMultiply = document.getElementById("multiply");
+// const buttonDivide = document.getElementById("divide");
+// const buttonEquals = document.getElementById("equals-button");
+// const buttonClear = document.getElementById("clear");
+const operators = document.querySelectorAll("button")
+
+//other
 const screen = document.getElementById("screen");
 const nightMode = document.getElementById("nightMode");
 
@@ -52,12 +54,13 @@ button0.addEventListener("click", button0Click);
 buttonDecimal.addEventListener("click", buttonDecimalClick);
 
 //operators
-buttonPlus.addEventListener("click", buttonPlusClick);
-buttonMinus.addEventListener("click", buttonMinusClick);
-buttonMultiply.addEventListener("click", buttonMultiplyClick);
-buttonDivide.addEventListener("click", buttonDivideClick);
-buttonEquals.addEventListener("click", buttonEqualsClick);
-buttonClear.addEventListener("click", buttonClearClick);
+// buttonPlus.addEventListener("click", buttonPlusClick);
+// buttonMinus.addEventListener("click", buttonMinusClick);
+// buttonMultiply.addEventListener("click", buttonMultiplyClick);
+// buttonDivide.addEventListener("click", buttonDivideClick);
+// buttonEquals.addEventListener("click", buttonEqualsClick);
+// buttonClear.addEventListener("click", buttonClearClick);
+operators.addEventListener('click', operatorClick); 
 
 nightMode.addEventListener("click", toggleNightMode);
 
@@ -79,10 +82,24 @@ function updateScreen() {
 		screen.innerText = firstNum.join("") * 1;
 	} else {
 		screen.innerText =
-			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
+			firstNum.join("") + operatorSelect + secondNum.join("");
 	}
 }
 
+function numClick(){
+
+}
+
+function operatorClick(){
+	if (operatorSelect.length !== 0) {
+		buttonEqualsClick();
+	} else {
+		for (const operator of operators){
+			operatorSelect[0] = document.operator.innerText;
+			updateScreen()
+		}
+	}
+}
 //number buttons
 function button1Click() {
 	if (operatorSelect.length === 0) {
@@ -209,7 +226,6 @@ function buttonMultiplyClick() {
 	}
 	operatorSelect[0] = `x`;
 	screen.innerText = firstNum.join("") * 1 + "x";
-	console.log(operatorSelect);
 }
 function buttonDivideClick() {
 	if (operatorSelect.length !== 0) {
@@ -217,7 +233,6 @@ function buttonDivideClick() {
 	}
 	operatorSelect[0] = `÷`;
 	screen.innerText = firstNum.join("") * 1 + "÷";
-	console.log(operatorSelect);
 }
 function buttonEqualsClick() {
 	if (operatorSelect.length !== 0) {
@@ -245,9 +260,6 @@ function buttonEqualsClick() {
 function buttonClearClick() {
 	resetData();
 	screen.innerText = 0;
-	console.log("FirstNum:", firstNum.join("") * 1);
-	console.log("Operator:", operatorSelect.join(""));
-	console.log("SecondNum:", secondNum.join("") * 1);
 }
 
 function toggleNightMode() {
