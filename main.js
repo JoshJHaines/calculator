@@ -25,13 +25,9 @@ const button0 = document.getElementById("zero");
 const buttonDecimal = document.getElementById("decimal");
 
 //operators
-// const buttonPlus = document.getElementById("plus");
-// const buttonMinus = document.getElementById("minus");
-// const buttonMultiply = document.getElementById("multiply");
-// const buttonDivide = document.getElementById("divide");
-// const buttonEquals = document.getElementById("equals-button");
-// const buttonClear = document.getElementById("clear");
-const operators = document.querySelectorAll("button")
+const buttonEquals = document.getElementById("equals-button");
+const buttonClear = document.getElementById("clear");
+const operators = document.querySelectorAll(".operators")
 
 //other
 const screen = document.getElementById("screen");
@@ -54,13 +50,11 @@ button0.addEventListener("click", button0Click);
 buttonDecimal.addEventListener("click", buttonDecimalClick);
 
 //operators
-// buttonPlus.addEventListener("click", buttonPlusClick);
-// buttonMinus.addEventListener("click", buttonMinusClick);
-// buttonMultiply.addEventListener("click", buttonMultiplyClick);
-// buttonDivide.addEventListener("click", buttonDivideClick);
-// buttonEquals.addEventListener("click", buttonEqualsClick);
-// buttonClear.addEventListener("click", buttonClearClick);
-operators.addEventListener('click', operatorClick); 
+buttonEquals.addEventListener("click", buttonEqualsClick);
+buttonClear.addEventListener("click", buttonClearClick);
+for (operator of operators){
+	operator.addEventListener('click', operatorClick);
+}
 
 nightMode.addEventListener("click", toggleNightMode);
 
@@ -90,15 +84,17 @@ function numClick(){
 
 }
 
-function operatorClick(){
+function operatorClick(event){
+	console.log(event)
 	if (operatorSelect.length !== 0) {
 		buttonEqualsClick();
+		operatorSelect[0] = event.target.innerText;
 	} else {
 		for (const operator of operators){
-			operatorSelect[0] = document.operator.innerText;
-			updateScreen()
+			operatorSelect[0] = event.target.innerText;
 		}
 	}
+	updateScreen()
 }
 //number buttons
 function button1Click() {
