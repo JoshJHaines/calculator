@@ -1,3 +1,10 @@
+/*************
+ * DATA SETS *
+ *************/
+const firstNum = []
+const secondNum = []
+const operatorSelect = []
+
 /*******************
  * EVENT LISTENERS *
  *******************/
@@ -42,12 +49,12 @@
  buttonDecimal.addEventListener("click", testClick);
 
  //operators
- buttonPlus.addEventListener("click", testClick);
- buttonMinus.addEventListener("click", testClick);
- buttonMultiply.addEventListener("click", testClick);
- buttonDivide.addEventListener("click", testClick);
- buttonEquals.addEventListener("click", testClick);
- buttonClear.addEventListener("click", testClick);
+ buttonPlus.addEventListener("click", operatorSelector);
+ buttonMinus.addEventListener("click", operatorSelector);
+ buttonMultiply.addEventListener("click", operatorSelector);
+ buttonDivide.addEventListener("click", operatorSelector);
+ buttonEquals.addEventListener("click", operatorSelector);
+ buttonClear.addEventListener("click", operatorSelector);
 
 
 /********************
@@ -56,4 +63,10 @@
 
 function testClick(){
     console.log("Did this work?")
+}
+
+function operatorSelector(){
+    console.log("Operator Used")
+    operatorSelect[0] = "*"
+    console.log(operatorSelect)
 }
