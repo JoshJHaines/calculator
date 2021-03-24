@@ -29,22 +29,31 @@
  * CLICK HANDLING FUNCTION  *
  ****************************/
 //numbers
- button1.addEventListener("click", unnamedHelperFunction);
- button2.addEventListener("click", unnamedHelperFunction);
- button3.addEventListener("click", unnamedHelperFunction);
- button4.addEventListener("click", unnamedHelperFunction);
- button5.addEventListener("click", unnamedHelperFunction);
- button6.addEventListener("click", unnamedHelperFunction);
- button7.addEventListener("click", unnamedHelperFunction);
- button8.addEventListener("click", unnamedHelperFunction);
- button9.addEventListener("click", unnamedHelperFunction);
- button0.addEventListener("click", unnamedHelperFunction);
- buttonDecimal.addEventListener("click", unnamedHelperFunction);
+ button1.addEventListener("click", testClick);
+ button2.addEventListener("click", testClick);
+ button3.addEventListener("click", testClick);
+ button4.addEventListener("click", testClick);
+ button5.addEventListener("click", testClick);
+ button6.addEventListener("click", testClick);
+ button7.addEventListener("click", testClick);
+ button8.addEventListener("click", testClick);
+ button9.addEventListener("click", testClick);
+ button0.addEventListener("click", testClick);
+ buttonDecimal.addEventListener("click", testClick);
 
  //operators
- buttonPlus.addEventListener("click", unnamedHelperFunction);
- buttonMinus.addEventListener("click", unnamedHelperFunction);
- buttonMultiply.addEventListener("click", unnamedHelperFunction);
- buttonDivide.addEventListener("click", unnamedHelperFunction);
- buttonEquals.addEventListener("click", unnamedHelperFunction);
+ buttonPlus.addEventListener("click", testClick);
+ buttonMinus.addEventListener("click", testClick);
+ buttonMultiply.addEventListener("click", testClick);
+ buttonDivide.addEventListener("click", testClick);
+ buttonEquals.addEventListener("click", testClick);
  buttonClear.addEventListener("click", unnamedHelperFunction);
+
+
+/********************
+ * HELPER FUNCTIONS *
+ ********************/
+
+function testClick(){
+    console.log("Did this work?")
+}
