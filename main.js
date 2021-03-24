@@ -36,17 +36,17 @@ const operatorSelect = []
  * CLICK HANDLING FUNCTION  *
  ****************************/
 //numbers
- button1.addEventListener("click", testClick);
- button2.addEventListener("click", testClick);
- button3.addEventListener("click", testClick);
- button4.addEventListener("click", testClick);
- button5.addEventListener("click", testClick);
- button6.addEventListener("click", testClick);
- button7.addEventListener("click", testClick);
- button8.addEventListener("click", testClick);
- button9.addEventListener("click", testClick);
- button0.addEventListener("click", testClick);
- buttonDecimal.addEventListener("click", testClick);
+ button1.addEventListener("click", button1Click);
+ button2.addEventListener("click", button2Click);
+ button3.addEventListener("click", button3Click);
+ button4.addEventListener("click", button4Click);
+ button5.addEventListener("click", button5Click);
+ button6.addEventListener("click", button6Click);
+ button7.addEventListener("click", button7Click);
+ button8.addEventListener("click", button8Click);
+ button9.addEventListener("click", button9Click);
+ button0.addEventListener("click", button0Click);
+ buttonDecimal.addEventListener("click", buttonDecimalClick);
 
  //operators
  buttonPlus.addEventListener("click", operatorSelector);
@@ -69,4 +69,38 @@ function operatorSelector(){
     console.log("Operator Used")
     operatorSelect[0] = "*"
     console.log(operatorSelect)
+}
+
+function button1Click(){
+    console.log(1)
+}
+function button2Click(){
+    console.log(2)
+}
+function button3Click(){
+    console.log(3)
+}
+function button4Click(){
+    console.log(4)
+}
+function button5Click(){
+    console.log(5)
+}
+function button6Click(){
+    console.log(6)
+}
+function button7Click(){
+    console.log(7)
+}
+function button8Click(){
+    console.log(8)
+}
+function button9Click(){
+    console.log(9)
+}
+function button0Click(){
+    console.log(0)
+}
+function buttonDecimalClick(){
+    console.log(`.`)
 }
