@@ -260,9 +260,9 @@ function buttonEqualsClick() {
         solution = firstNum.join("") * 1;
     }
 
-    screen.innerText = solution.toFixed(4);
+    screen.innerText = parseFloat(solution.toFixed(4));
     resetData()
-    firstNum[0] = solution.toFixed(4)
+    firstNum[0] = parseFloat(solution.toFixed(4));
 	console.log(solution);
 }
 function buttonClearClick() {
