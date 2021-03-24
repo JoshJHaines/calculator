@@ -187,18 +187,22 @@ function buttonDecimalClick() {
 //operator buttons
 function buttonPlusClick() {
 	operatorSelect[0] = `+`;
+    screen.innerText = "+"
 	console.log(operatorSelect);
 }
 function buttonMinusClick() {
 	operatorSelect[0] = `-`;
+    screen.innerText = "-"
 	console.log(operatorSelect);
 }
 function buttonMultiplyClick() {
 	operatorSelect[0] = `*`;
+    screen.innerText = "*"
 	console.log(operatorSelect);
 }
 function buttonDivideClick() {
 	operatorSelect[0] = `/`;
+    screen.innerText = "/"
 	console.log(operatorSelect);
 }
 function buttonEqualsClick() {
@@ -216,7 +220,7 @@ function buttonEqualsClick() {
             solution = ((firstNum.join("") * 1) / secondNum.join("")) * 1;
         } 
 	} else {
-        solution = console.log(firstNum.join("") * 1);;
+        solution = console.log(firstNum.join("") * 1);
     }
 
     screen.innerText = solution;
