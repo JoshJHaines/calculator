@@ -172,23 +172,15 @@ function buttonDecimalClick() {
 		console.log("Num2DecCheck:", num2decimalCheck);
 		if (num1decimalCheck === false) {
 			firstNum.push(`.`);
-			screen.innerText = firstNum.join("") * 1;
-			console.log(firstNum);
-		} else {
-			screen.innerText = firstNum.join("") * 1;
-		}
+			
+		} 
+		updateScreen()
 	} else {
 		if (num2decimalCheck === false) {
 			secondNum.push(`.`);
-			screen.innerText =
-				firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
-		} else {
-			screen.innerText =
-				firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
-		}
+		} 
+		updateScreen()
 	}
-	console.log("FirstNum:", firstNum);
-	console.log("SecondNum:", secondNum);
 }
 //operator buttons
 function buttonPlusClick() {
