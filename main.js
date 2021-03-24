@@ -1,8 +1,7 @@
 /*************
  * DATA SETS *
  *************/
-const firstNumArr = [];
-const firstNum = firstNumArr.join("");
+const firstNum = [];
 const secondNum = [];
 const operatorSelect = [];
 
@@ -63,15 +62,15 @@ function testClick() {
 	console.log("Did this work?");
 }
 
-function operatorSelector() {
-	console.log("Operator Used");
-	operatorSelect[0] = "*";
-	console.log(operatorSelect);
-}
 //number buttons
 function button1Click() {
-    firstNumArr.push(1);
-    console.log(firstNumArr.join("")*1);
+    if (operatorSelect.length === 0){
+        firstNum.push(1);
+    } else {
+        secondNum.push(1)
+    }
+    console.log("FirstNum:", firstNum.join("")*1);
+    console.log("SecondNum:", secondNum.join("")*1)
 }
 function button2Click() {
 	console.log(2);
@@ -105,7 +104,8 @@ function buttonDecimalClick() {
 }
 //operator buttons
 function buttonPlusClick() {
-	console.log(`+`);
+    operatorSelect[0] = `+` 
+	console.log(operatorSelect);
 }
 function buttonMinusClick() {
 	console.log(`-`);
@@ -120,5 +120,10 @@ function buttonEqualsClick() {
 	console.log(`Will need to create function to calculate equation`);
 }
 function buttonClearClick() {
-	console.log("Will need to write function to reset calculator");
+    firstNum.splice(0)
+    secondNum.splice(0)
+    operatorSelect.splice(0)
+	console.log("FirstNum:",firstNum.join("")*1);
+    console.log("Operator:",operatorSelect.join(""));
+    console.log("SecondNum:",secondNum.join("")*1);
 }
