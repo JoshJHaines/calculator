@@ -167,18 +167,22 @@ function button0Click() {
 function buttonDecimalClick() {
 	const num1decimalCheck = firstNum.includes(".");
 	const num2decimalCheck = secondNum.includes(".");
+	//Checking firstNum if there is a decimal
 	if (operatorSelect.length === 0) {
-		console.log("Num1DecCheck:", num1decimalCheck);
-		console.log("Num2DecCheck:", num2decimalCheck);
+		//If no decimal, add decimal
 		if (num1decimalCheck === false) {
 			firstNum.push(`.`);
 			
 		} 
+		//If YES decimal, display what is already there
 		updateScreen()
+	//Checking secondNum if there is a decimal
 	} else {
+		//If no decimal, add decimal
 		if (num2decimalCheck === false) {
 			secondNum.push(`.`);
 		} 
+		//If YES decimal, display what is already there
 		updateScreen()
 	}
 }
