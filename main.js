@@ -47,7 +47,7 @@
  buttonMultiply.addEventListener("click", testClick);
  buttonDivide.addEventListener("click", testClick);
  buttonEquals.addEventListener("click", testClick);
- buttonClear.addEventListener("click", unnamedHelperFunction);
+ buttonClear.addEventListener("click", testClick);
 
 
 /********************
