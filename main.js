@@ -167,8 +167,8 @@ function button9Click() {
 		secondNum.push(9);
         screen.innerText = secondNum.join("") * 1
 	}
-	console.log("FirstNum:", firstNum.join("") * 1);
-	console.log("SecondNum:", secondNum.join("") * 1);
+	console.log("FirstNum:", firstNum);
+	console.log("SecondNum:", secondNum);
 }
 function button0Click() {
 	if (operatorSelect.length === 0) {
@@ -178,11 +178,32 @@ function button0Click() {
 		secondNum.push(0);
         screen.innerText = secondNum.join("") * 1
 	}
-	console.log("FirstNum:", firstNum.join("") * 1);
-	console.log("SecondNum:", secondNum.join("") * 1);
+	console.log("FirstNum:", firstNum);
+	console.log("SecondNum:", secondNum);
 }
 function buttonDecimalClick() {
-	console.log(`.`);
+    const num1decimalCheck = firstNum.includes(".")
+    const num2decimalCheck = secondNum.includes(".")
+	if (operatorSelect.length === 0) {
+        console.log("Num1DecCheck:", num1decimalCheck)
+        console.log("Num2DecCheck:", num2decimalCheck)
+        if (num1decimalCheck === false){
+            firstNum.push(`.`);
+            screen.innerText = firstNum.join("") * 1
+            console.log(firstNum)
+        } else {
+            screen.innerText = firstNum.join("") * 1
+        }
+	} else {
+        if (num2decimalCheck === false){
+            secondNum.push(`.`);
+            screen.innerText = secondNum.join("") * 1
+        } else {
+            screen.innerText = secondNum.join("") * 1
+        }
+	}
+	console.log("FirstNum:", firstNum);
+	console.log("SecondNum:", secondNum);
 }
 //operator buttons
 function buttonPlusClick() {
