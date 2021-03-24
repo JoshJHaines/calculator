@@ -74,31 +74,85 @@ function button1Click() {
 	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function button2Click() {
-	console.log(2);
+	if (operatorSelect.length === 0) {
+		firstNum.push(2);
+	} else {
+		secondNum.push(2);
+	}
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function button3Click() {
-	console.log(3);
+	if (operatorSelect.length === 0) {
+		firstNum.push(3);
+	} else {
+		secondNum.push(3);
+	}
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function button4Click() {
-	console.log(4);
+	if (operatorSelect.length === 0) {
+		firstNum.push(4);
+	} else {
+		secondNum.push(4);
+	}
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function button5Click() {
-	console.log(5);
+	if (operatorSelect.length === 0) {
+		firstNum.push(5);
+	} else {
+		secondNum.push(5);
+	}
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function button6Click() {
-	console.log(6);
+	if (operatorSelect.length === 0) {
+		firstNum.push(6);
+	} else {
+		secondNum.push(6);
+	}
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function button7Click() {
-	console.log(7);
+	if (operatorSelect.length === 0) {
+		firstNum.push(7);
+	} else {
+		secondNum.push(7);
+	}
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function button8Click() {
-	console.log(8);
+	if (operatorSelect.length === 0) {
+		firstNum.push(8);
+	} else {
+		secondNum.push(8);
+	}
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function button9Click() {
-	console.log(9);
+	if (operatorSelect.length === 0) {
+		firstNum.push(9);
+	} else {
+		secondNum.push(9);
+	}
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function button0Click() {
-	console.log(0);
+	if (operatorSelect.length === 0) {
+		firstNum.push(0);
+	} else {
+		secondNum.push(0);
+	}
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function buttonDecimalClick() {
 	console.log(`.`);
@@ -121,23 +175,22 @@ function buttonDivideClick() {
 	console.log(operatorSelect);
 }
 function buttonEqualsClick() {
-	if (operatorSelect.length === 0) {
-		console.log(firstNum.join("") * 1);
-	}
-	if (operatorSelect[0] === "+") {
-		solution = firstNum.join("") * 1 + secondNum.join("") * 1;
-	}
-	if (operatorSelect[0] === "-") {
-		solution = firstNum.join("") * 1 - secondNum.join("") * 1;
-	}
-	if (operatorSelect[0] === "*") {
-		solution = firstNum.join("") * 1 * secondNum.join("") * 1;
-	}
-	if (operatorSelect[0] === "/") {
-		solution = ((firstNum.join("") * 1) / secondNum.join("")) * 1;
+	if (operatorSelect.length !== 0) {
+        if (operatorSelect[0] === "+") {
+            solution = firstNum.join("") * 1 + secondNum.join("") * 1;
+        }
+        if (operatorSelect[0] === "-") {
+            solution = firstNum.join("") * 1 - secondNum.join("") * 1;
+        }
+        if (operatorSelect[0] === "*") {
+            solution = firstNum.join("") * 1 * secondNum.join("") * 1;
+        }
+        if (operatorSelect[0] === "/") {
+            solution = ((firstNum.join("") * 1) / secondNum.join("")) * 1;
+        } 
 	} else {
-		solution = "You Broke something";
-	}
+        solution = console.log(firstNum.join("") * 1);;
+    }
 	console.log(solution);
 }
 function buttonClearClick() {
