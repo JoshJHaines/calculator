@@ -73,15 +73,6 @@ function operatorClick(event) {
 	}
 	updateScreen();
 }
-//number buttons
-function numClick(event) {
-	if (operatorSelect.length === 0) {
-		firstNum.push(event.target.innerText);
-	} else {
-		secondNum.push(event.target.innerText);
-	}
-	updateScreen();
-}
 
 function buttonDecimalClick() {
 	const num1decimalCheck = firstNum.includes(".");
@@ -133,6 +124,17 @@ function buttonClearClick() {
 	screen.innerText = 0;
 }
 
+//number buttons
+function numClick(event) {
+	if (operatorSelect.length === 0) {
+		firstNum.push(event.target.innerText);
+	} else {
+		secondNum.push(event.target.innerText);
+	}
+	updateScreen();
+}
+
+//night mode  stretch goal
 function toggleNightMode() {
 	console.log("NIGHT MODE CLICKED");
 	if (nightModeSet === false) {
