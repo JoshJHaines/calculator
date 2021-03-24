@@ -5,7 +5,7 @@ const firstNum = [];
 const secondNum = [];
 const operatorSelect = [];
 let solution = 0;
-let nightModeSet = false
+let nightModeSet = false;
 
 /*******************
  * EVENT LISTENERS *
@@ -68,8 +68,8 @@ nightMode.addEventListener("click", toggleNightMode);
 function testClick() {
 	console.log("Did this work?");
 }
-function resetData(){
-    firstNum.splice(0);
+function resetData() {
+	firstNum.splice(0);
 	secondNum.splice(0);
 	operatorSelect.splice(0);
 }
@@ -78,10 +78,11 @@ function resetData(){
 function button1Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(1);
-        screen.innerText = firstNum.join("") * 1
+		screen.innerText = firstNum.join("") * 1;
 	} else {
 		secondNum.push(1);
-        screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
+		screen.innerText =
+			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -89,10 +90,11 @@ function button1Click() {
 function button2Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(2);
-        screen.innerText = firstNum.join("") * 1
+		screen.innerText = firstNum.join("") * 1;
 	} else {
 		secondNum.push(2);
-        screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
+		screen.innerText =
+			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -100,10 +102,11 @@ function button2Click() {
 function button3Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(3);
-        screen.innerText = firstNum.join("") * 1
+		screen.innerText = firstNum.join("") * 1;
 	} else {
 		secondNum.push(3);
-        screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
+		screen.innerText =
+			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -111,10 +114,11 @@ function button3Click() {
 function button4Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(4);
-        screen.innerText = firstNum.join("") * 1
+		screen.innerText = firstNum.join("") * 1;
 	} else {
 		secondNum.push(4);
-        screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
+		screen.innerText =
+			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -122,10 +126,11 @@ function button4Click() {
 function button5Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(5);
-        screen.innerText = firstNum.join("") * 1
+		screen.innerText = firstNum.join("") * 1;
 	} else {
 		secondNum.push(5);
-        screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
+		screen.innerText =
+			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -133,10 +138,11 @@ function button5Click() {
 function button6Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(6);
-        screen.innerText = firstNum.join("") * 1
+		screen.innerText = firstNum.join("") * 1;
 	} else {
 		secondNum.push(6);
-        screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
+		screen.innerText =
+			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -144,10 +150,11 @@ function button6Click() {
 function button7Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(7);
-        screen.innerText = firstNum.join("") * 1
+		screen.innerText = firstNum.join("") * 1;
 	} else {
 		secondNum.push(7);
-        screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
+		screen.innerText =
+			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -155,10 +162,11 @@ function button7Click() {
 function button8Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(8);
-        screen.innerText = firstNum.join("") * 1
+		screen.innerText = firstNum.join("") * 1;
 	} else {
 		secondNum.push(8);
-        screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
+		screen.innerText =
+			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
 	}
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("SecondNum:", secondNum.join("") * 1);
@@ -166,10 +174,11 @@ function button8Click() {
 function button9Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(9);
-        screen.innerText = firstNum.join("") * 1
+		screen.innerText = firstNum.join("") * 1;
 	} else {
 		secondNum.push(9);
-        screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
+		screen.innerText =
+			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
 	}
 	console.log("FirstNum:", firstNum);
 	console.log("SecondNum:", secondNum);
@@ -177,110 +186,113 @@ function button9Click() {
 function button0Click() {
 	if (operatorSelect.length === 0) {
 		firstNum.push(0);
-        screen.innerText = firstNum.join("") * 1
+		screen.innerText = firstNum.join("") * 1;
 	} else {
 		secondNum.push(0);
-        screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
+		screen.innerText =
+			firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
 	}
 	console.log("FirstNum:", firstNum);
 	console.log("SecondNum:", secondNum);
 }
 function buttonDecimalClick() {
-    const num1decimalCheck = firstNum.includes(".")
-    const num2decimalCheck = secondNum.includes(".")
+	const num1decimalCheck = firstNum.includes(".");
+	const num2decimalCheck = secondNum.includes(".");
 	if (operatorSelect.length === 0) {
-        console.log("Num1DecCheck:", num1decimalCheck)
-        console.log("Num2DecCheck:", num2decimalCheck)
-        if (num1decimalCheck === false){
-            firstNum.push(`.`);
-            screen.innerText = firstNum.join("") * 1
-            console.log(firstNum)
-        } else {
-            screen.innerText = firstNum.join("") * 1
-        }
+		console.log("Num1DecCheck:", num1decimalCheck);
+		console.log("Num2DecCheck:", num2decimalCheck);
+		if (num1decimalCheck === false) {
+			firstNum.push(`.`);
+			screen.innerText = firstNum.join("") * 1;
+			console.log(firstNum);
+		} else {
+			screen.innerText = firstNum.join("") * 1;
+		}
 	} else {
-        if (num2decimalCheck === false){
-            secondNum.push(`.`);
-			screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
-        } else {
-			screen.innerText = (firstNum.join("") * 1) + operatorSelect + (secondNum.join("") * 1)
-        }
+		if (num2decimalCheck === false) {
+			secondNum.push(`.`);
+			screen.innerText =
+				firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
+		} else {
+			screen.innerText =
+				firstNum.join("") * 1 + operatorSelect + secondNum.join("") * 1;
+		}
 	}
 	console.log("FirstNum:", firstNum);
 	console.log("SecondNum:", secondNum);
 }
 //operator buttons
 function buttonPlusClick() {
-	if (operatorSelect.length !== 0){
-		buttonEqualsClick()
+	if (operatorSelect.length !== 0) {
+		buttonEqualsClick();
 	}
 	operatorSelect[0] = `+`;
-    screen.innerText =(firstNum.join("") * 1) + "+"
+	screen.innerText = firstNum.join("") * 1 + "+";
 	console.log(operatorSelect);
 }
 function buttonMinusClick() {
-	if (operatorSelect.length !== 0){
-		buttonEqualsClick()
+	if (operatorSelect.length !== 0) {
+		buttonEqualsClick();
 	}
 	operatorSelect[0] = `-`;
-    screen.innerText =(firstNum.join("") * 1) + "-"
+	screen.innerText = firstNum.join("") * 1 + "-";
 	console.log(operatorSelect);
 }
 function buttonMultiplyClick() {
-	if (operatorSelect.length !== 0){
-		buttonEqualsClick()
+	if (operatorSelect.length !== 0) {
+		buttonEqualsClick();
 	}
 	operatorSelect[0] = `*`;
-    screen.innerText =(firstNum.join("") * 1) + "x"
+	screen.innerText = firstNum.join("") * 1 + "x";
 	console.log(operatorSelect);
 }
 function buttonDivideClick() {
-	if (operatorSelect.length !== 0){
-		buttonEqualsClick()
+	if (operatorSelect.length !== 0) {
+		buttonEqualsClick();
 	}
 	operatorSelect[0] = `/`;
-    screen.innerText =(firstNum.join("") * 1) + "÷"
+	screen.innerText = firstNum.join("") * 1 + "÷";
 	console.log(operatorSelect);
 }
 function buttonEqualsClick() {
 	if (operatorSelect.length !== 0) {
-        if (operatorSelect[0] === "+") {
-            solution = firstNum.join("") * 1 + secondNum.join("") * 1;
-        }
-        if (operatorSelect[0] === "-") {
-            solution = firstNum.join("") * 1 - secondNum.join("") * 1;
-        }
-        if (operatorSelect[0] === "*") {
-            solution = firstNum.join("") * 1 * secondNum.join("") * 1;
-        }
-        if (operatorSelect[0] === "/") {
-            solution = ((firstNum.join("") * 1) / secondNum.join("")) * 1;
-        } 
+		if (operatorSelect[0] === "+") {
+			solution = firstNum.join("") * 1 + secondNum.join("") * 1;
+		}
+		if (operatorSelect[0] === "-") {
+			solution = firstNum.join("") * 1 - secondNum.join("") * 1;
+		}
+		if (operatorSelect[0] === "*") {
+			solution = firstNum.join("") * 1 * secondNum.join("") * 1;
+		}
+		if (operatorSelect[0] === "/") {
+			solution = ((firstNum.join("") * 1) / secondNum.join("")) * 1;
+		}
 	} else {
-        solution = firstNum.join("") * 1;
-    }
+		solution = firstNum.join("") * 1;
+	}
 
-    screen.innerText = parseFloat(solution.toFixed(4));
-    resetData()
-    firstNum[0] = parseFloat(solution.toFixed(4));
+	screen.innerText = parseFloat(solution.toFixed(4));
+	resetData();
+	firstNum[0] = parseFloat(solution.toFixed(4));
 	console.log(solution);
 }
 function buttonClearClick() {
-	resetData()
-    screen.innerText = 0
+	resetData();
+	screen.innerText = 0;
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("Operator:", operatorSelect.join(""));
 	console.log("SecondNum:", secondNum.join("") * 1);
 }
 
 function toggleNightMode() {
-    console.log("NIGHT MODE CLICKED")
-    if (nightModeSet === false){
-        nightModeSet = true
-        
-        document.getElementById('container').style.backgroundColor = "purple"
-    } else {
-        nightModeSet = false
-        document.getElementById('container').style.backgroundColor = "#293241"
-    }
+	console.log("NIGHT MODE CLICKED");
+	if (nightModeSet === false) {
+		nightModeSet = true;
+
+		document.getElementById("container").style.backgroundColor = "purple";
+	} else {
+		nightModeSet = false;
+		document.getElementById("container").style.backgroundColor = "#293241";
+	}
 }
