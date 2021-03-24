@@ -4,6 +4,7 @@
 const firstNum = [];
 const secondNum = [];
 const operatorSelect = [];
+let solution = 0;
 
 /*******************
  * EVENT LISTENERS *
@@ -64,13 +65,13 @@ function testClick() {
 
 //number buttons
 function button1Click() {
-    if (operatorSelect.length === 0){
-        firstNum.push(1);
-    } else {
-        secondNum.push(1)
-    }
-    console.log("FirstNum:", firstNum.join("")*1);
-    console.log("SecondNum:", secondNum.join("")*1)
+	if (operatorSelect.length === 0) {
+		firstNum.push(1);
+	} else {
+		secondNum.push(1);
+	}
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
 function button2Click() {
 	console.log(2);
@@ -104,26 +105,46 @@ function buttonDecimalClick() {
 }
 //operator buttons
 function buttonPlusClick() {
-    operatorSelect[0] = `+` 
+	operatorSelect[0] = `+`;
 	console.log(operatorSelect);
 }
 function buttonMinusClick() {
-	console.log(`-`);
+	operatorSelect[0] = `-`;
+	console.log(operatorSelect);
 }
 function buttonMultiplyClick() {
-	console.log(`*`);
+	operatorSelect[0] = `*`;
+	console.log(operatorSelect);
 }
 function buttonDivideClick() {
-	console.log(`/`);
+	operatorSelect[0] = `/`;
+	console.log(operatorSelect);
 }
 function buttonEqualsClick() {
-	console.log(`Will need to create function to calculate equation`);
+	if (operatorSelect.length === 0) {
+		console.log(firstNum.join("") * 1);
+	}
+	if (operatorSelect[0] === "+") {
+		solution = firstNum.join("") * 1 + secondNum.join("") * 1;
+	}
+	if (operatorSelect[0] === "-") {
+		solution = firstNum.join("") * 1 - secondNum.join("") * 1;
+	}
+	if (operatorSelect[0] === "*") {
+		solution = firstNum.join("") * 1 * secondNum.join("") * 1;
+	}
+	if (operatorSelect[0] === "/") {
+		solution = ((firstNum.join("") * 1) / secondNum.join("")) * 1;
+	} else {
+		solution = "You Broke something";
+	}
+	console.log(solution);
 }
 function buttonClearClick() {
-    firstNum.splice(0)
-    secondNum.splice(0)
-    operatorSelect.splice(0)
-	console.log("FirstNum:",firstNum.join("")*1);
-    console.log("Operator:",operatorSelect.join(""));
-    console.log("SecondNum:",secondNum.join("")*1);
+	firstNum.splice(0);
+	secondNum.splice(0);
+	operatorSelect.splice(0);
+	console.log("FirstNum:", firstNum.join("") * 1);
+	console.log("Operator:", operatorSelect.join(""));
+	console.log("SecondNum:", secondNum.join("") * 1);
 }
