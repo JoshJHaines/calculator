@@ -23,3 +23,28 @@
  const buttonDivide = document.getElementById("divide");
  const buttonEquals = document.getElementById("equals-button");
  const buttonClear = document.getElementById("clear");
+
+
+/****************************
+ * CLICK HANDLING FUNCTION  *
+ ****************************/
+//numbers
+ button1.addEventListener("click", unnamedHelperFunction);
+ button2.addEventListener("click", unnamedHelperFunction);
+ button3.addEventListener("click", unnamedHelperFunction);
+ button4.addEventListener("click", unnamedHelperFunction);
+ button5.addEventListener("click", unnamedHelperFunction);
+ button6.addEventListener("click", unnamedHelperFunction);
+ button7.addEventListener("click", unnamedHelperFunction);
+ button8.addEventListener("click", unnamedHelperFunction);
+ button9.addEventListener("click", unnamedHelperFunction);
+ button0.addEventListener("click", unnamedHelperFunction);
+ buttonDecimal.addEventListener("click", unnamedHelperFunction);
+
+ //operators
+ buttonPlus.addEventListener("click", unnamedHelperFunction);
+ buttonMinus.addEventListener("click", unnamedHelperFunction);
+ buttonMultiply.addEventListener("click", unnamedHelperFunction);
+ buttonDivide.addEventListener("click", unnamedHelperFunction);
+ buttonEquals.addEventListener("click", unnamedHelperFunction);
+ buttonClear.addEventListener("click", unnamedHelperFunction);
