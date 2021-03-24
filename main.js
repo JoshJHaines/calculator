@@ -12,16 +12,7 @@ let nightModeSet = false;
  *******************/
 
 //numbers
-const button1 = document.getElementById("one");
-const button2 = document.getElementById("two");
-const button3 = document.getElementById("three");
-const button4 = document.getElementById("four");
-const button5 = document.getElementById("five");
-const button6 = document.getElementById("six");
-const button7 = document.getElementById("seven");
-const button8 = document.getElementById("eight");
-const button9 = document.getElementById("nine");
-const button0 = document.getElementById("zero");
+const numbers = document.querySelectorAll(".numbers")
 const buttonDecimal = document.getElementById("decimal");
 
 //operators
@@ -37,16 +28,9 @@ const nightMode = document.getElementById("nightMode");
  * CLICK HANDLING FUNCTION  *
  ****************************/
 //numbers
-button1.addEventListener("click", button1Click);
-button2.addEventListener("click", button2Click);
-button3.addEventListener("click", button3Click);
-button4.addEventListener("click", button4Click);
-button5.addEventListener("click", button5Click);
-button6.addEventListener("click", button6Click);
-button7.addEventListener("click", button7Click);
-button8.addEventListener("click", button8Click);
-button9.addEventListener("click", button9Click);
-button0.addEventListener("click", button0Click);
+for (number of numbers){
+	number.addEventListener('click', numClick);
+}
 buttonDecimal.addEventListener("click", buttonDecimalClick);
 
 //operators
@@ -62,9 +46,6 @@ nightMode.addEventListener("click", toggleNightMode);
  * HELPER FUNCTIONS *
  ********************/
 //tests
-function testClick() {
-	console.log("Did this work?");
-}
 function resetData() {
 	firstNum.splice(0);
 	secondNum.splice(0);
@@ -73,15 +54,22 @@ function resetData() {
 
 function updateScreen() {
 	if (operatorSelect.length === 0) {
-		screen.innerText = firstNum.join("") * 1;
+		screen.innerText = firstNum.join("");
 	} else {
 		screen.innerText =
 			firstNum.join("") + operatorSelect + secondNum.join("");
 	}
 }
 
-function numClick(){
+function numClick(event){
+	console.log(event)
 
+	if (operatorSelect.length === 0) {
+		firstNum.push(event.target.innerText);
+	} else {
+		secondNum.push(event.target.innerText);
+	}
+	updateScreen();
 }
 
 function operatorClick(event){
