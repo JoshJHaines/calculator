@@ -101,3 +101,8 @@ button {
 	margin-right: auto;
 	background-color: transparent;
 }
+
+#nightMode{
+    background-color: red;
+	color: black;
+}
