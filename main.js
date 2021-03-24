@@ -242,7 +242,7 @@ function buttonMultiplyClick() {
 	if (operatorSelect.length !== 0) {
 		buttonEqualsClick();
 	}
-	operatorSelect[0] = `*`;
+	operatorSelect[0] = `x`;
 	screen.innerText = firstNum.join("") * 1 + "x";
 	console.log(operatorSelect);
 }
@@ -262,7 +262,7 @@ function buttonEqualsClick() {
 		if (operatorSelect[0] === "-") {
 			solution = firstNum.join("") * 1 - secondNum.join("") * 1;
 		}
-		if (operatorSelect[0] === "*") {
+		if (operatorSelect[0] === "x") {
 			solution = firstNum.join("") * 1 * secondNum.join("") * 1;
 		}
 		if (operatorSelect[0] === "÷") {
