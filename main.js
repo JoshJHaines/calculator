@@ -5,6 +5,7 @@ const firstNum = [];
 const secondNum = [];
 const operatorSelect = [];
 let solution = 0;
+let nightModeSet = false
 
 /*******************
  * EVENT LISTENERS *
@@ -32,6 +33,7 @@ const buttonEquals = document.getElementById("equals-button");
 const buttonClear = document.getElementById("clear");
 //screen
 const screen = document.getElementById("screen");
+const nightMode = document.getElementById("nightMode");
 
 /****************************
  * CLICK HANDLING FUNCTION  *
@@ -56,6 +58,8 @@ buttonMultiply.addEventListener("click", buttonMultiplyClick);
 buttonDivide.addEventListener("click", buttonDivideClick);
 buttonEquals.addEventListener("click", buttonEqualsClick);
 buttonClear.addEventListener("click", buttonClearClick);
+
+nightMode.addEventListener("click", toggleNightMode);
 
 /********************
  * HELPER FUNCTIONS *
@@ -255,4 +259,16 @@ function buttonClearClick() {
 	console.log("FirstNum:", firstNum.join("") * 1);
 	console.log("Operator:", operatorSelect.join(""));
 	console.log("SecondNum:", secondNum.join("") * 1);
+}
+
+function toggleNightMode() {
+    console.log("NIGHT MODE CLICKED")
+    if (nightModeSet === false){
+        nightModeSet = true
+        
+        document.getElementById('container').style.backgroundColor = "purple"
+    } else {
+        nightModeSet = false
+        document.getElementById('container').style.backgroundColor = "#293241"
+    }
 }
